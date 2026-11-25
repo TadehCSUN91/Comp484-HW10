@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Giga Pet - HW10 DevTools</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        This is your Giga Pet
+      </h1>
+    </header>
+
+    <main>
+      <section class="pet-image-container">
+        <!-- Pet image: my own SVG drawing of Biscuit the husky -->
+        <img class="pet-image" src="images/husky.svg" alt="Biscuit the husky">
+      </section>
+      <section class="dashboard">
+        <div>Name: <strong><span class="name"></span></strong></div>
+        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
+        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        <!-- New stat that goes with the new Nap button -->
+        <div>Energy: <strong><span class="energy"></span> / 100</strong></div>
+
+        <!-- Visual notification: the pet "talks" here after every button press -->
+        <div id="pet-message" class="pet-message">Biscuit is waiting for you...</div>
+
+        <div class="button-container">
+          <button class="treat-button">
+            Treat
+          </button>
+          <button class="play-button">
+            Play
+          </button>
+          <button class="exercise-button">
+            Exercise
+          </button>
+          <!-- New action button -->
+          <button class="nap-button">
+            Nap
+          </button>
+          <!-- HW10: new button used for the Sources panel debugging walkthrough (has an intentional bug) -->
+          <button class="vet-button">
+            Vet Check
+          </button>
+        </div>
+
+        <!-- HW10: buttons that trigger the browser-logged messages for DevTools -->
+        <div class="devtools-demo">
+          <h3>DevTools Demo</h3>
+          <button class="demo-console-button">Run Console Demo</button>
+          <button class="demo-404-button">Trigger 404</button>
+          <button class="demo-typeerror-button">Trigger TypeError</button>
+          <button class="demo-violation-button">Trigger Violation</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <!-- HW10: all the console logging and browser-error demos live in debug.js -->
+    <script src="debug.js"></script>
+  </body>
+</html>
